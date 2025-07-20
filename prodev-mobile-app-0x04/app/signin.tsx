@@ -5,7 +5,7 @@ import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import { GOOGLELOGO, FACEBOOKLOGO, HEROLOGO } from "@/constants";
 
-export default function Join() {
+export default function Signin() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -14,10 +14,10 @@ export default function Join() {
           <Image source={HEROLOGO} />
         </View>
         <View style={styles.titleTextGroup}>
-          <Text style={styles.titleText}>Create your</Text>
+          <Text style={styles.titleText}>Sign in to your</Text>
           <Text style={styles.titleText}>Account</Text>
           <Text style={styles.subText}>
-            Please fill in the details to join us.
+            Enter your email and password to sign in.
           </Text>
         </View>
         <View style={styles.formGroup}>
@@ -28,10 +28,11 @@ export default function Join() {
             <TextInput style={styles.passwordControl} secureTextEntry />
             <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
           </View>
+          <Text style={styles.forgotPasswordText}>Forgot password?</Text>
         </View>
 
         <TouchableOpacity style={styles.primaryButton}>
-          <Text style={styles.buttonText}>Join now</Text>
+          <Text style={styles.buttonText}>Sign in</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -54,9 +55,9 @@ export default function Join() {
         </View>
 
         <View style={styles.signupgroup}>
-          <Text style={styles.signupTitleText}>Already have an account? </Text>
-          <TouchableOpacity onPress={() => router.push("/signin")}>
-            <Text style={styles.signupSubTitleText}>Sign in</Text>
+          <Text style={styles.signupTitleText}>Do not have an account? </Text>
+          <TouchableOpacity onPress={() => router.push("/join")}>
+            <Text style={styles.signupSubTitleText}>Join now</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>

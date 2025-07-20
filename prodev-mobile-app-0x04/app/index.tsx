@@ -28,7 +28,7 @@ export default function Home() {
         <View style={styles.buttonGroup}>
           <TouchableOpacity
             style={styles.buttonPrimary}
-            onPress={() => router.push("/Sign")}
+            onPress={() => router.push("/signin")}
           >
             <Text style={styles.buttonPrimaryText}>Sign In</Text>
           </TouchableOpacity>
